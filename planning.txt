@@ -1,0 +1,50 @@
+Voting Application 
+
+steps before creating a project !
+
+- What ( A functionality where users can give vote to the given set of candidates )
+- includes 
+
+Models 
+Routes
+End points 
+
+----------------------------------------------------
+-- > Functionalities 
+
+- User sign in / sign up 
+- list of candidates
+- vote one of candidate , after voting , user can't vote again 
+- there is a route which shows real time vote count sorted by their vote count ( highest to lowest )
+- user data must contain their one unique gov id proof : 
+- admin user [ to list candidates standing for election ]
+- users can modify / update their password 
+- users can login with aadhar card and password
+- admin can't vote
+- admin can create candidate 
+
+-----------------------------------------------------
+--> Routes ( End points )
+
+- User Authentication 
+    - /sign up : POST - create user
+    - /sign in : POST - login user ( aadhar card and password )
+    
+
+- Voting 
+    - /candidates : GET - list of candidates
+    - /vote/:candidateId : POST - vote to a candidate
+
+- Vote Count 
+    - /vote/counts : GET - list of candidates with their vote count ( highest to lowest )
+
+- User Profile 
+    - /profile : GET - get user profile
+    - /profile : PUT - update user profile
+    -/profile/password : PUT - update user password
+
+- Admin 
+    - /candidates : POST - create candidate
+    - /candidates/:candidateId : PUT - update candidate
+    - /candidates/:candidateId : DELETE - delete candidate
+
